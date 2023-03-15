@@ -12,8 +12,7 @@ void setup() {
 
 void loop() {
   IMU.readSensor();
-  Serial.print(IMU.getAccelX_mss(), 6);
+  Serial.print(IMU.getAccelY_mss(), 6);
   Serial.print('\n');
-  delay(1000);
+  delay(200);
 }
-
