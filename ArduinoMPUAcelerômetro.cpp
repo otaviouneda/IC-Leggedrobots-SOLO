@@ -14,5 +14,5 @@ void loop() {
   IMU.readSensor();
   Serial.print(IMU.getAccelY_mss(), 6);
   Serial.print('\n');
-  delay(200);
+  delay(100);
 }
