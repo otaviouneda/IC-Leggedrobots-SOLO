@@ -1,5 +1,4 @@
-#Teste Python Potenciômetro de corda
-
+#Código que lê de maneira serial os dados coletados pelo potenciômetro de corda e faz o plot dos mesmos.
 import serial
 import time 
 import matplotlib.pyplot as plt
@@ -25,14 +24,16 @@ for i in range(100):
     print(num_float)
     dados.append(1.156-num_float) #A altura do chão até a base do potenciômetro é 115.6 cm
 
-plt.plot(x,dados)
+plt.plot(x*10,dados)
 plt.grid(True)
 plt.ylim(0,1.156)
 plt.yscale('linear')
 plt.xscale('linear')
-plt.ylabel('Altura(m)')
-plt.title('Leitura potenciômetro de corda ')
+plt.ylabel('Altura(m)',fontsize=19)
+plt.xlabel('Tempo(s)',fontsize=19)
+plt.title('Leitura potenciômetro de corda ',fontsize=19)
 plt.show()
 arduino.close()
+  
   
  
